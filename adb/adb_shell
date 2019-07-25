@@ -1,0 +1,14 @@
+#!/usr/bin/expect -f
+
+set user xxxxx_your_user_name 
+set passwd xxxxx_your_password 
+set timeout 5
+
+spawn adb shell
+expect "*login:*"
+send "$user\r"
+
+expect "*assword:*"
+send "$passwd\r"
+
+interact
